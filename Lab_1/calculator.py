@@ -2,17 +2,18 @@
 
 def sum(m,n):
     i = 0
-    n = abs(n)
+    s = -1 if n < 0 else 1
     
-    while i <= n:
-        m += 1
-        i += 1
-    
+    while i < abs(n):
+        i += 1        
+        m += s
+        
     return m
     
 def divide(m,n):
     isNegative = (m < 0 and n > 0) or (m > 0 and n < 0)
     m = abs(m)
+    n = abs(n)
     
     if n == 0:
         # no!
@@ -27,4 +28,4 @@ def divide(m,n):
         
     
         
-print(divide(8,4))
+print(sum(-1,4))
